@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Vera Indah Lestari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md p-6 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Vera Indahl</h1>
+            <nav class="space-x-4">
+                <a href="#about" class="hover:text-blue-500">About</a>
+                <a href="#projects" class="hover:text-blue-500">Projects</a>
+                <a href="#contact" class="hover:text-blue-500">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center py-20 bg-gradient-to-r to-indigo-600 text-white fade-in"
+        style="background-color: #f5deb3; color: #333;">
+        <img src="img/vera.jpg" alt="Profile"
+            class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg">
+        <h2 class="text-4xl font-bold mb-4">Hi, I'm Vera 👋</h2>
+        <p class="text-lg mb-6">A passionate Web Developer who builds modern and responsive websites.</p>
+        <a href="#projects"
+            class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+            View My Work
+        </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-4xl mx-auto py-16 px-4 fade-in">
+        <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3>
+        <p class="text-gray-700 leading-relaxed text-center">
+            I'm a web developer with experience experienced Junior Web Programmer with 2 years in web development.
+            Proficient in PHP, CSS, and HTML, with expertise in frameworks like CodeIgniter, jQuery, and Bootstrap.
+        </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="bg-gray-50 py-16 px-4 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-10 text-center">My Projects</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition cursor-pointer">
+                    <img src="img/project/sistem-inventory-3.PNG" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Sistem Inventory</h4>
+                        <p class="text-gray-600 mb-4">Sistem Inventory rumah sakit</p>
+                        <button
+                            onclick="openModal('Project One', [
+                                'img/project/sistem-inventory-1.png', 
+                                'img/project/sistem-inventory-2.png',
+                                'img/project/sistem-inventory-3.png'
+                                ], 
+                                'Sistem inventory rumah sakit ini merupakan sistem untuk manajemen barang-barang inventaris seperti peralatan yang ada dirumah sakit. Sistem ini terdiri dari 2 bagian yaitu untuk sisi mobile digunakan untuk teknisi dan user ruangan inventaris untuk melaporkan pengecekkan alat dan kemudian disisi lain yaitu CMS pada bagian superadmin untuk melihat data, menjadwalkan dan mengelola laporan yang masuk. Terdapat juga fitur notifikasi lewat wa ketika ada laporan masuk')"
+                            class="text-blue-500 hover:underline">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition cursor-pointer">
+                    <img src="img/project/jurnal-guru-3.PNG" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Sistem Jurnal Guru</h4>
+                        <p class="text-gray-600 mb-4">Sistem presensi jurnal untuk guru</p>
+                        <button
+                            onclick="openModal('Project Two', [
+                                'img/project/jurnal-guru-1.PNG', 
+                                'img/project/jurnal-guru-2.PNG', 
+                                'img/project/jurnal-guru-3.PNG'], 
+                                'Sistem yang membantu guru untuk presensi siswa di kelas dan mendokumentasikan materi yang di ajarkan di setiap kelas dan mengatur jadwal guru. sistem ini menggunakan bahasa pemrograman php dengan framework codeigniter 3, bootstrap, css, jquery dan dengan digital signature menggunakan js signature database menggunakan mysql')"
+                            class="text-blue-500 hover:underline">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition cursor-pointer">
+                    <img src="img/project/sistem-laundry-1.PNG" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Sistem Laundry</h4>
+                        <p class="text-gray-600 mb-4">Sistem laundry untuk rumah sakit</p>
+                        <button
+                            onclick="openModal('Project Three', [
+                                'img/project/sistem-laundry-1.PNG', 
+                                'img/project/sistem-laundry-2.PNG'],
+                                'Sistem manajemen persediaan pakaian setiap ruangan di rumah sakit sistem ini menggunakan bahasa pemrograman php dengan framework codeigniter 3, bootstrap, css, jquery dan database MySQL')"
+                            class="text-blue-500 hover:underline">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition cursor-pointer">
+                    <img src="img/project/form-asacourse-3.PNG" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Sistem Form Pendaftaran</h4>
+                        <p class="text-gray-600 mb-4">Sistem Form Pendaftaran</p>
+                        <button
+                            onclick="openModal('Project Four', [
+                                'img/project/form-asacourse-1.PNG', 
+                                'img/project/form-asacourse-2.PNG',
+                                'img/project/form-asacourse-3.PNG'
+                                ], 
+                                'Sistem form pendaftaran pendaftaran. Salah satu fiturnya pembuatan kode referal otomatis yang bisa di diberikan kepada pendaftar yang terpilih yang kemudian kode referal dapat digunakan sebagai isian khusus pada form pendaftaran. Sistem ini menggunakan bahasa pemrograman php dengan framework codeigniter 3, bootstrap, css, jquery dan database MySQL ')"
+                            class="text-blue-500 hover:underline">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition cursor-pointer">
+                    <img src="img/project/indo-rekor-1.PNG" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Sistem Form Pendaftaran</h4>
+                        <p class="text-gray-600 mb-4">Sistem Form Pengajuan sertifikasi</p>
+                        <button
+                            onclick="openModal('Project Five', [
+                                'img/project/indo-rekor-1.PNG'
+                                ], 
+                                'Sistem untuk pengajuan sertifikasi. Sistem ini memiliki fitur form pengajuan, validasi pengajuan, cetak sertifikasi dalam bentuk pdf, melihat pengajuan yang lolos dan sertifikasi dapat di download di website. Sistem ini menggunakan bahasa pemrograman php native, bootstrap, css, jquery dan database MySQL ')"
+                            class="text-blue-500 hover:underline">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition cursor-pointer">
+                    <img src="img/project/sistem-namecard-1.PNG" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Sistem Pembuatan Name Card Siswa</h4>
+                        <p class="text-gray-600 mb-4">Sistem pembuatan kartu siswa</p>
+                        <button
+                            onclick="openModal('Project Six', [
+                                'img/project/sistem-namecard-1.PNG'
+                                ], 
+                                'Sistem ini mendata siswa lewat form pendaftaran siswa yang nantinya kartu pelajar akan otomatis terbuat sesuai dengan template yang tersedia dan dapat di download dalam bentuk pdf. Sistem ini menggunakan bahasa pemrograman php native, bootstrap, css, jquery dan database MySQL ')"
+                            class="text-blue-500 hover:underline">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition cursor-pointer">
+                    <img src="img/project/sistem-mab-1.PNG" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Sistem Laporan</h4>
+                        <p class="text-gray-600 mb-4">Sistem laporan cash in/out</p>
+                        <button
+                            onclick="openModal('Project Seven', [
+                                'img/project/sistem-mab-1.PNG',
+                                'img/project/sistem-mab-1.PNG'
+                                ], 
+                                'Sistem ini menggunakan bahasa pemrograman php native, bootstrap, css, jquery dan database MySQL ')"
+                            class="text-blue-500 hover:underline">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-4xl mx-auto py-16 px-4 text-center fade-in">
+        <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+        <p class="text-gray-700 mb-4">If you'd like to work together or have any questions, feel free to reach out!</p>
+        <a href="mailto:your@email.com"
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+            Send Email
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        &copy; 2025 Vera Indahl. All rights reserved.
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white p-6 rounded-lg max-w-2xl mx-auto relative">
+            <button onclick="closeModal()"
+                class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">&times;</button>
+            <h4 id="modal-title" class="text-2xl font-bold mb-4"></h4>
+
+            <!-- Image Slider -->
+            <div class="relative">
+                <img id="modal-image" src="" alt="Project Image" class="w-full h-64 object-cover rounded-lg mb-4">
+                <button onclick="prevImage()"
+                    class="absolute left-2 top-1/2 bg-gray-800 text-white px-3 py-1 rounded-full">‹</button>
+                <button onclick="nextImage()"
+                    class="absolute right-2 top-1/2 bg-gray-800 text-white px-3 py-1 rounded-full">›</button>
+            </div>
+
+            <p id="modal-content" class="text-gray-700 mt-4"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
